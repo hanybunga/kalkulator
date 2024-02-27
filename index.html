@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <style>
+        #bungkus{
+            margin: 10px;
+            margin-left: 40px;
+            width: 100px;
+            height: 8px;
+           
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="bungkus">
+        <h1>Kalkulator Sederhana</h1>
+       
+        <label for="bilA">Bilangan -A :</label>
+        <input type="number" id="bilA"  required><br>
+
+        <label for="bilB">Bilangan -B :</label>
+        <input type="number" id="bilB"  required><br>
+
+        <input type="button" value=+ onclick="tambah()">
+        <input type="button" value=- onclick="kurang()">
+        <input type="button" value=* onclick="kali()">
+        <input type="button" value=/ onclick="bagi()">
+
+        <label for="hasil">Hasil :</label><br>
+        <input type="text" id="hasil"><br>
+
+      
+     
+    </div>
+    <script type="text/javascript">
+    function tambah(){
+    var nilai1 = document.getElementById("bilA").value;
+    var nilai2 = document.getElementById("bilB").value;
+    var nhasil = "";
+    if(nilai1=="" || nilai2==""){
+        nhasil = "Nilai harus berisi";
+    }else{
+            nhasil = parseInt(nilai1)+parseInt(nilai2);
+    }
+    document.getElementById("hasil").value = nhasil;
+}
+function kurang(){
+    var nilai1 = document.getElementById("bilA").value;
+    var nilai2 = document.getElementById("bilB").value;
+    var nhasil = "";
+    if(nilai1=="" || nilai2==""){
+        nhasil = "Nilai harus berisi";
+    }else{
+            nhasil = parseInt(nilai1)-parseInt(nilai2);
+    }
+    document.getElementById("hasil").value = nhasil;
+}
+function kali(){
+    var nilai1 = document.getElementById("bilA").value;
+    var nilai2 = document.getElementById("bilB").value;
+    var nhasil = "";
+    if(nilai1=="" || nilai2=="" ){
+        nhasil = "Nilai harus berisi";
+    }else{
+            nhasil = parseInt(nilai1)*parseInt(nilai2);
+    }
+    document.getElementById("hasil").value = nhasil;
+}
+function bagi(){
+    var nilai1 = document.getElementById("bilA").value;
+    var nilai2 = document.getElementById("bilB").value;
+    var nhasil = "";
+    if(nilai1=="" || nilai2==""){
+        nhasil = "Nilai harus berisi";
+    }else{
+            nhasil = parseInt(nilai1)/parseInt(nilai2);
+    }
+    document.getElementById("hasil").value = nhasil;
+}
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
